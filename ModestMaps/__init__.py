@@ -68,11 +68,11 @@ __version__ = open(os.path.join(os.path.dirname(__file__), 'VERSION')).read().st
 
 import sys
 import urllib
-import httplib
-import urlparse
-import StringIO
+from six.moves import http_client
+from six.moves import urllib
+from six import StringIO
 import math
-import thread
+from six.moves import _thread
 import time
 
 try:
