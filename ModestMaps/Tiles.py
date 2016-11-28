@@ -81,9 +81,7 @@ octalStrings = ('000', '001', '010', '011', '100', '101', '110', '111')
 def toBinaryString(i):
     """ Return a binary string for an integer.
     """
-    return ''.join([octalStrings[int(c)]
-                    for c
-                    in oct(i)]).lstrip('0')
+    return bin(i).split('b')[1]
 
 def fromBinaryString(s):
     """ Return an integer for a binary string.
